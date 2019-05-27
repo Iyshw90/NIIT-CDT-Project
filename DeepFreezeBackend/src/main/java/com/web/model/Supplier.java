@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Supplier {
@@ -11,7 +12,11 @@ public class Supplier {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int supId;
+	
+	@NotNull
 	private String supName;
+	
+	@NotNull
 	private String supAddr;
 
 	public int getSupId() {

@@ -2,18 +2,32 @@ package com.web.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Email;
 
 @Entity
 public class UserDetail {
 	
-	@Id
+	@Id @NotNull
 	private String userName;
+	
+	@NotNull
 	private String password;
 	
+	@NotNull
 	private String address;
+	
+	@NotNull
 	private boolean enabled;
+	
+	@NotNull @Email
 	private String email;
+	
+	@NotNull
 	private String role;
+	
+	@NotNull
 	private String customerName;
 	
 	public String getUserName() {

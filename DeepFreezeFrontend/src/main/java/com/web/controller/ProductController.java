@@ -1,5 +1,8 @@
 package com.web.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -10,6 +13,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.web.dao.CategoryDAO;
 import com.web.dao.ProductDAO;
@@ -83,9 +88,36 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value="/InsertProduct", method=RequestMethod.POST)
-	public String insertProduct(@ModelAttribute("product") Product prod,Model m)
+	public String insertProduct(@ModelAttribute("product") Product prod,@RequestParam("pimage")MultipartFile fileImage,Model m)
 	{
 		productDAO.addProduct(prod);
+		
+		//Adding image of the product
+		String path ="D:\\NIITProject\\DeepFreezeFrontend\\src\\main\\webapp\\resources\\images\\";
+		path = path+String.valueOf(prod.getProdId())+".jpg";
+		
+		File imageFile= new File(path);
+		
+		if(!fileImage.isEmpty())
+		{
+			try {
+				byte[] buffer=fileImage.getBytes();
+				FileOutputStream fos=new FileOutputStream(imageFile);
+				BufferedOutputStream bs = new BufferedOutputStream(fos);
+				bs.write(buffer);
+				bs.close();
+			}
+			catch(Exception e)
+			{
+				System.out.println("Exception arised"+e);
+			}
+		}
+		else
+		{
+			System.out.println("Error occured");
+		}
+		
+				
 		List<Product> productList= productDAO.listProduct();
 		m.addAttribute("productList",productList);
 		
@@ -157,6 +189,22 @@ public class ProductController {
 		m.addAttribute("supplierList", this.getSuplierList(supplierList));
 		
 		return "Product";
+	}
+	
+	@RequestMapping(value="/productsPage")
+	public String displayProductPage(Model m)
+	{
+		List<Product> productList= productDAO.listProduct();
+		m.addAttribute("productList",productList);
+		return "ProductsPage";
+	}
+	
+	@RequestMapping(value="/singleProductDisplay/{productId}")
+	public String singleProductDisplay(@PathVariable("productId")int productId,Model m)
+	{
+		Product product= productDAO.getProduct(productId);
+		m.addAttribute("product", product);
+		return "SingleProductPage";
 	}
 
 

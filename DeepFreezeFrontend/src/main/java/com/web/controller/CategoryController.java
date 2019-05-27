@@ -16,9 +16,11 @@ import com.web.model.Category;
 @Controller
 public class CategoryController {
 	
+	/*@Autowired annotation is used to inject categoryDAO bean implicitly*/
 	@Autowired
 	CategoryDAO categoryDAO;
 	
+	/*when the user hits on the */
 	@RequestMapping(value ="/category")
 	public String showCategoryPage(Model m)
 	{
@@ -26,7 +28,7 @@ public class CategoryController {
 		m.addAttribute(categoryList);
 		return "Category";
 	}
-	
+	/**/
 	@RequestMapping(value="/InsertCategory")
 	public String insertCategory(@RequestParam("categoryName")String categoryName,@RequestParam("categoryDesc")String categoryDesc,Model m)
 	{
@@ -42,14 +44,18 @@ public class CategoryController {
 		
 	}
 	
+	/**/
 	@RequestMapping(value="/editCategory/{categoryId}")
 	public String editCategory(@PathVariable("categoryId")int categoryId, Model m)
 	{
 		Category category = categoryDAO.getCategory(categoryId);
 		m.addAttribute("category", category);
+		
+				
 		return "UpdateCategory";
 	}
 	
+	/**/
 	@RequestMapping(value="/deleteCategory/{categoryId}")
 	public String deleteCategory(@PathVariable("categoryId")int categoryId,Model m)
 	{
@@ -61,6 +67,7 @@ public class CategoryController {
 		return "Category";
 	}
 	
+	/**/
 	@RequestMapping(value="/UpdateCategory",method = RequestMethod.POST)
 	public String updateCategory(@RequestParam("categoryId")int categoryId, @RequestParam("categoryName")String categoryName,@RequestParam("categoryDesc")String categoryDesc,Model m)
 	{

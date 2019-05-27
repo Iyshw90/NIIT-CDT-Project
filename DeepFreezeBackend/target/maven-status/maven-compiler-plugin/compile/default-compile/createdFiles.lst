@@ -1,4 +1,5 @@
 com\web\dao\SupplierDAO.class
+com\web\dao\CartDAOImpl.class
 com\web\dao\ProductDAO.class
 com\web\dao\UserDAO.class
 com\web\model\Product.class
@@ -7,6 +8,8 @@ com\web\model\Supplier.class
 com\web\config\DBConfig.class
 com\web\dao\CategoryDAOImpl.class
 com\web\dao\CategoryDAO.class
+com\web\dao\CartDAO.class
+com\web\model\Cart.class
 com\web\dao\ProductDAOImpl.class
 com\web\dao\UserDAOImpl.class
 com\web\DeepFreezeBackend\App.class

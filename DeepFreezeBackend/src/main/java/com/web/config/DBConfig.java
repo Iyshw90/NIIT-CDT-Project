@@ -11,6 +11,7 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.web.model.Cart;
 import com.web.model.Category;
 import com.web.model.Product;
 import com.web.model.Supplier;
@@ -53,6 +54,7 @@ public class DBConfig {
 		factory.addAnnotatedClass(Product.class);
 		factory.addAnnotatedClass(Supplier.class);
 		factory.addAnnotatedClass(UserDetail.class);
+		factory.addAnnotatedClass(Cart.class);
 		
 		SessionFactory sessionFactory = factory.buildSessionFactory();
 		System.out.println("--SessionFactory bean created--");
@@ -67,10 +69,6 @@ public class DBConfig {
 		return new HibernateTransactionManager(sessionFactory);
 	}
 	
-	/*@Bean(name="categoryDAO")
-	public CategoryDAOImpl getCategoryDAOImpl()
-	{
-		return new CategoryDAOImpl();
-	}*/
+	
 
 }

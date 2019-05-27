@@ -60,6 +60,7 @@ public class ProductDAOTest {
 		
 	}
 	
+	@Ignore
 	@Test
 	public void showProductListCategoryWise()
 	{

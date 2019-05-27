@@ -1,3 +1,5 @@
+D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\model\Cart.java
+D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\dao\CartDAO.java
 D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\model\UserDetail.java
 D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\DeepFreezeBackend\App.java
 D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\dao\ProductDAOImpl.java
@@ -12,3 +14,4 @@ D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\dao\CategoryDAO.java
 D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\dao\CategoryDAOImpl.java
 D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\model\Category.java
 D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\model\Supplier.java
+D:\NIITProject\DeepFreezeBackend\src\main\java\com\web\dao\CartDAOImpl.java

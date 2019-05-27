@@ -23,6 +23,7 @@ static UserDAO userDetailDAO;
 		userDetailDAO = (UserDAO) context.getBean("userDetailDAO");
 	}
 	
+	@Ignore
 	@Test
 	public void addUserTest() {
 		UserDetail user = new UserDetail();

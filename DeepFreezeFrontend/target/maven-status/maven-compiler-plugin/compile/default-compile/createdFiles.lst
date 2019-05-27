@@ -1,1 +1,5 @@
+com\web\controller\CategoryController.class
+com\web\controller\CartController.class
 com\web\controller\PageController.class
+com\web\controller\ProductController.class
+com\web\controller\SupplierController.class

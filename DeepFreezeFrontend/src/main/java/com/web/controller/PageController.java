@@ -21,5 +21,12 @@ public class PageController {
 		return "Register";
 		
 	}
+	
+	@RequestMapping(value="/aboutUs")
+	public String showAboutUsPage() 
+	{
+		return "AboutUs";
+		
+	}
 
 }
