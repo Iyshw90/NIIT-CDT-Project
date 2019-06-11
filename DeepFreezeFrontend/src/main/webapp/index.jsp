@@ -23,6 +23,9 @@
 .carousel-control-prev-icon,.carousel-control-next-icon{
 	color:black;
 }
+.bgColor{
+	background-color:#deeaee;
+}
 </style>
 </head>
 
@@ -62,8 +65,7 @@
     <div class="carousel-item">
       <img src="<c:url value="/resources/images/static/Carousel-Fridges4.jpg"/>"  alt="Carousel-Fridges6" width="1200" height="500">
     </div>
-   
-    
+      
   </div>
   
   <!-- Left and right controls -->
@@ -75,7 +77,22 @@
   </a>
 </div>
 
+
+<!-- Footer section starts -->
+<br><br>
+<article class="bgColor mb-2">  
+<div class="card-body text-center">
+    <h3 class="text-black mt-3">DEEP FREEZE</h3> 
+<p class="h5 text-b;ack"> <h5>World of Refrigerator's </h5> <h6>choose your unique style of cooling and keep it cool </h6> </p>   <br>
+<p><a class="btn btn-info" target="_blank" href="<c:url value="/aboutUs"/>"> © 2007-2019 Deepfreeze.com  
+ <i class="fa fa-window-restore "></i></a></p>
 </div>
+<br><br>
+</article>
+
+
+</div>
+
 
 
 

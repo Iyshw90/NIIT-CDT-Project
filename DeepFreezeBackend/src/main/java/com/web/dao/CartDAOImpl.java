@@ -11,10 +11,23 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.web.model.Cart;
+/*DAO - Data access object is an object/interface that provides access to an underlying database or any other persistent storage.*/
+
+/*DAO classes is the one where we write methods to perform operations over Database.*/
+
+/* @Repository - used to import the "cartDAO" into the DI container.*/
+/*This is also to indicate that the class defines a data repository.*/
+/*@Repository - used so that any platform-specific exceptions are caught and then re-thrown as one of Spring’s unchecked data access exceptions.*/
+
+
+/*@Transactional - the boundary of transaction starts and boundary ends when method completes.*/
+/*Using @Transactional - Any exception will result in rollback of all JPA transactions with DB. Internally JPA transaction are used by Spring.*/
 
 @Repository("cartDAO")
 @Transactional
 public class CartDAOImpl implements CartDAO {
+	
+	/*@Autowired - used to auto wire "sessionFactory" bean from spring container.This enables us to inject the object dependency implicitly during runtime.*/
 	@Autowired
 	SessionFactory sessionFactory;
 
@@ -27,7 +40,7 @@ public class CartDAOImpl implements CartDAO {
 				int count=0,flag=0;
 				while(count<cartItemList.size())
 				{
-					if(cartItemList.get(count).getProductId() == cart.getProductId())
+					if(cartItemList.get(count).getProdId() == cart.getProdId())
 					{
 						Cart cart1=cartItemList.get(count);
 						cart1.setQuantity(cart1.getQuantity() + cart.getQuantity());
@@ -96,4 +109,9 @@ public class CartDAOImpl implements CartDAO {
 		return cartListItems;
 	}
 
+	/*can use @Autowired annotation to auto wire spring bean on setter method, instance variable, and constructor. 
+	 * If you use @Autowired annotation, spring container auto-wires the bean by matching data type.*/
+	
+	/* For target beans annotated with @Transactional, Spring will create a TransactionInterceptor, and pass it to the generated proxy object.*/
+	/*When the invocation finishes, the TransactionInterceptor commits/rolls back the transaction*/
 }

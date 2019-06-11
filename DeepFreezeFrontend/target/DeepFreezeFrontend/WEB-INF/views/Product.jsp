@@ -66,11 +66,11 @@ function validateForm(){
 	
 	<tr>
 		<td id="equalCol" align="right">Stock </td>		
-	 <td id="equalCol"><form:input id="myStock" path="stock" required="true" /></td>
+	 <td id="equalCol"><form:input id="myStock" path="stock" placeholder="Min: 5 to Max: 150" required="true" /></td>
 	</tr>
 	<tr>
 		<td id="equalCol" align="right"> Price </td>
-		<td id="equalCol"><form:input id="myPrice" path="price" required="true" /></td>
+		<td id="equalCol"><form:input id="myPrice" path="price" placeholder="Min: 7000 to Max: 80000" required="true" /></td>
 	</tr>
 	<tr>
 		<td id="equalCol" align="right">Category </td>

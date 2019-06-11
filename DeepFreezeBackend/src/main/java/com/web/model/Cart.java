@@ -6,10 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
 
+/*@Entity annotation defines that a class can be mapped to a table.*/
+
+@Entity
 public class Cart {
 	
+	/*@Id marks a field in a model class as the primary key*/
+	/*@GeneratedValue(strategy = GenerationType.IDENTITY) - It relies on an auto-incremented database column and lets the database generate a new value with each insert operation.*/
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int cartItemId;
@@ -18,7 +22,7 @@ public class Cart {
 	
 	private String username;
 	
-	private int productId;
+	private int prodId;
 	
 	private String productName;
 	
@@ -28,6 +32,7 @@ public class Cart {
 	
 	private String status;
 
+	/*Getter and Setter methods for accessing the feilds*/
 	public int getCartItemId() {
 		return cartItemId;
 	}
@@ -52,12 +57,12 @@ public class Cart {
 		this.username = username;
 	}
 
-	public int getProductId() {
-		return productId;
+	public int getProdId() {
+		return prodId;
 	}
 
-	public void setProductId(int productId) {
-		this.productId = productId;
+	public void setProdId(int productId) {
+		this.prodId = productId;
 	}
 
 	public String getProductName() {

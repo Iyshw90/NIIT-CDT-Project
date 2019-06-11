@@ -1,4 +1,6 @@
 com\web\dao\SupplierDAO.class
+com\web\model\OrderDetail.class
+com\web\dao\OrderDAOImpl.class
 com\web\dao\CartDAOImpl.class
 com\web\dao\ProductDAO.class
 com\web\dao\UserDAO.class
@@ -14,4 +16,5 @@ com\web\dao\ProductDAOImpl.class
 com\web\dao\UserDAOImpl.class
 com\web\DeepFreezeBackend\App.class
 com\web\dao\SupplierDAOImpl.class
+com\web\dao\OrderDAO.class
 com\web\model\Category.class

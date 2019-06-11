@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.web.dao.SupplierDAO;
 import com.web.model.Supplier;
 
+/*@Controller annotation indicates that a particular class serves the role of a controller. */
+/*The dispatcher scans such annotated classes for mapped methods and detects @RequestMapping annotations.*/
+
 @Controller
 public class SupplierController {
 	

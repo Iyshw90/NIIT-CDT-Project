@@ -1,8 +1,7 @@
 <%@ include file="Header.jsp"%>
-<!DOCTYPE html>
+
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <title>Login</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +26,13 @@ border-radius: 5px;
 .col-sm h2{
 border-radius: 10px;
   padding-top: 50px;
+}
+.bgColor{
+	background-color:#deeaee;
+}
+
+.loginButton{
+padding-top: 10px !important;
 }
 
 td.checkbox{
@@ -54,33 +60,41 @@ padding-left:0rem;
 			
 				<div class="col-sm">
 					<h2><center>Login</center></h2>
-					<form action="#">
+					<form action="perform_login" method="post">
 						<table align="center">
 							<tr class="form-group">
 								
 
-								<td><label for="email">Email:</label></td>
-								<td><input type="email" class="form-control" id="email"
-									placeholder="Enter email" name="email"></td>
+								<td><label for="username">Username:</label></td>
+								<td><input type="text" class="form-control" id="username"
+									placeholder="Enter Username" name="username"></td>
 									
 							</tr>
 							<tr class="form-group">
 
 								<td><label for="pwd">Password:</label></td>
-								<td><input type="password" class="form-control" id="pswd"
-									placeholder="Enter password" name="pswd"></td>
+								<td><input type="password" class="form-control" id="password"
+									placeholder="Enter password" name="password"></td>
 							</tr>
-							<tr class="form-group form-check">
+							<!--  <tr class="form-group form-check">
 							<td></td>
 								<td class="checkbox"><label class="form-check-label"> <input
 										class="form-check-input" type="checkbox" name="remember">
 										Remember me
 								</label></td>
-							</tr>
-							<tr>
+							</tr>-->
+							<tr><td></td><td></td></tr>
+							<tr><td></td><td></td></tr>
+							<tr><td></td><td></td></tr>
+							<tr><td></td><td></td></tr>
+							<tr><td></td><td></td></tr>
+													
+							<tr class="loginButton">
+							<td></td>
+							
 								<td>
 									<div class="col-md-4 text-center">
-									<button type="submit" class="btn btn-primary center-block">Submit</button>
+									<input type="submit" value="  Login  " class="btn btn-primary center-block"/>
 									</div>
 								</td>
 							</tr>
@@ -90,5 +104,17 @@ padding-left:0rem;
 
 </div>			
 </div>
+
+<!-- Footer section starts -->
+<br><br>
+<article class="bgColor mb-2">  
+<div class="card-body text-center">
+    <h3 class="text-black mt-3">DEEP FREEZE</h3> 
+<p class="h5 text-b;ack"> <h5>World of Refrigerator's </h5> <h6>choose your unique style of cooling and keep it cool </h6> </p>   <br>
+<p><a class="btn btn-info" target="_blank" href="<c:url value="/aboutUs"/>"> © 2007-2019 Deepfreeze.com  
+ <i class="fa fa-window-restore "></i></a></p>
+</div>
+<br><br>
+</article>
 </body>
 </html>

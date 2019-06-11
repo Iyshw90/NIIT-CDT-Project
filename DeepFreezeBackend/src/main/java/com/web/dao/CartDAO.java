@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.web.model.Cart;
 
+/*CartDAO Interface - Blueprint of "CartDAOImpl" class for implementing total abstraction,also used to achieve multiple inheritance*/
 public interface CartDAO {
 	
 	public boolean addToCart(Cart cart);

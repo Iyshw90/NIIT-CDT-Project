@@ -8,10 +8,18 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.web.model.UserDetail;
 
+/*DAO - Data access object is an object/interface that provides access to an underlying database or any other persistent storage.*/
+
+/* @Repository - used to import the "userDetailDAO" into the DI container.*/
+/*This is also to indicate that the class defines a data repository.*/
+
+/*@Transactional - the boundary of transaction starts and boundary ends when method completes.*/
+
 @Repository("userDetailDAO")
 @Transactional
 public class UserDAOImpl implements UserDAO{
 	
+	/*@Autowired - used to auto wire "sessionFactory" bean from spring container.This enables us to inject the object dependency implicitly during runtime.*/
 	@Autowired
 	SessionFactory sessionFactory;
 

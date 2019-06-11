@@ -1,5 +1,7 @@
-com\web\controller\CategoryController.class
-com\web\controller\CartController.class
-com\web\controller\PageController.class
+com\web\controller\UserController.class
 com\web\controller\ProductController.class
 com\web\controller\SupplierController.class
+com\web\controller\CategoryController.class
+com\web\controller\PaymentController.class
+com\web\controller\CartController.class
+com\web\controller\PageController.class

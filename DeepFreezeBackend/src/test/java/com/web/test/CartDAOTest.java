@@ -30,7 +30,7 @@ public class CartDAOTest {
 	@Test
 	public void addToCartTest() {
 		Cart cart= new Cart();
-		cart.setProductId(12);
+		cart.setProdId(12);
 		cart.setProductName("R2");
 		cart.setQuantity(2);
 		cart.setPrice(25000);

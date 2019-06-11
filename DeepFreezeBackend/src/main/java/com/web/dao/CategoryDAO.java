@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.web.model.Category;
 
-
+/*CategoryDAO Interface - Blueprint of "CategoryDAOImpl" class for implementing total abstraction,also used to achieve multiple inheritance*/
 public interface CategoryDAO {
 	
 	public boolean addCategory(Category category);

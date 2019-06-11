@@ -6,12 +6,16 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Email;
 
+/*@Entity annotation defines that a class can be mapped to a table.*/
+
 @Entity
 public class UserDetail {
 	
+	/*@Id marks a field in a model class as the primary key*/
 	@Id @NotNull
-	private String userName;
+	private String username;
 	
+	/*@NotNull constraint won’t allow null values for the constrained field*/
 	@NotNull
 	private String password;
 	
@@ -30,11 +34,12 @@ public class UserDetail {
 	@NotNull
 	private String customerName;
 	
+	/*Getter and Setter methods for accessing the feilds*/
 	public String getUserName() {
-		return userName;
+		return username;
 	}
 	public void setUserName(String userName) {
-		this.userName = userName;
+		this.username = userName;
 	}
 	public String getPassword() {
 		return password;

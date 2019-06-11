@@ -5,6 +5,9 @@ package com.web.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/*@Controller annotation indicates that a particular class serves the role of a controller. */
+/*The dispatcher scans such annotated classes for mapped methods and detects @RequestMapping annotations.*/
+
 @Controller
 public class PageController {
 	

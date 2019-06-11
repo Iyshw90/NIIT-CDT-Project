@@ -23,6 +23,9 @@ import com.web.model.Category;
 import com.web.model.Product;
 import com.web.model.Supplier;
 
+/*@Controller annotation indicates that a particular class serves the role of a controller. */
+/*The dispatcher scans such annotated classes for mapped methods and detects @RequestMapping annotations.*/
+
 @Controller
 public class ProductController {
 	

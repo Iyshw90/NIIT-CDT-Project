@@ -15,7 +15,7 @@
 }
 
 .product>img{
-	max-width: 230px;
+	max-width: 100%;
 }
 
 .product-rating{
@@ -63,24 +63,26 @@
 
 .view-wrapper {
 	float: right;
-	max-width: 70%;
+	max-width: 100%;
 	margin-top: 25px;
 }
 
 .container#cont {
+	float:left;
 	padding-left: 0px;
 	padding-right: 0px;
-	max-width: 100%;
+	max-width: 50%;
+}
+
+.container#contRight{
+	float:right !important;
+	padding-left: 0px;
+	padding-right: 0px;
+	max-width: 50%;
 }
 
 
-.service-image-left {
-	padding-right: 50px;
-}
 
-.service-image-left > center > img,.service-image-right > center > img{
-	max-height: 155px;
-}
 
 </style>
 </head>
@@ -95,17 +97,18 @@
 		<div class="item-container">	
 			<div class="container" id="cont">	
 				<div class="col-md-12">
-					<div class="product col-md-3 service-image-left">
+					<div class="product service-image-left">
                     
 						<center>
-							<img id="item-display" src="<c:url value="/resources/images/${product.prodId}.jpg"/>" alt=""/>
+							<img id="item-display" src="<c:url value="/resources/images/${product.prodId}.jpg"/>" alt="" width="500" height="500" />
 						</center>
 					</div>
 					
 				</div>
-					
+			</div>
+			<div class="container" id="contRight">	
 				<form action="<c:url value="/addToCart/${product.prodId}" />" method="get">
-				<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+				<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 ">
 					<div class="product-title">${product.prodName}</div>
 					<div class="product-desc">${product.prodDesc}</div>
 					<hr>
@@ -116,23 +119,20 @@
 							<option value="1" > 1</option>
 							<option value="2" > 2</option>
 							<option value="3" > 3</option>
-							<option value="4" > 4</option>
-							<option value="5" > 5</option>
-						
+													
 						</select>
 					</div>
 					<hr>
 					<div class="btn-group cart">
 					
-						<input type="submit" value="Add to cart" class="btn btn-success">
+						<input type="submit" value="Add to cart" class="btn btn-success" />
 							
-						</button>
+						
 					</div>
-					<div class="btn-group wishlist">
-						<button type="button" class="btn btn-danger">
-							Buy Now 
-						</button>
-					</div>
+					<!--  <div class="btn-group wishlist">
+						<a href="<c:url value="/checkout"/>" class="btn btn-block btn-danger" > Buy Now</a>
+						
+					</div>-->
 				</div>
 				
 				</form>	

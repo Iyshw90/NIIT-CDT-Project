@@ -23,9 +23,9 @@
                 </thead>
                 <tbody>
                 <c:forEach items="${cartItems}" var="cartItem">
-                <form action="<c:url value="/updateCartItem/${cartItem.cartItemId}"/>" method="get">
+                <form action="<c:url value="/updateCartItem/${cartItem.cartItemId}"/>" >
                    <tr>
-                    <td><img src="<c:url value="/resources/images/${cartItem.productId}.jsp"/>" ></td>
+                    <td><img class="img-fluid img-thumbnail thumbnailSize" src="<c:url value="/resources/images/${cartItem.prodId}.jpg"/>" width="50" height="50" ></td>
                     <td>${cartItem.productName}</td>
                     <td>In Stock</td>
                     <td><input class="form-control" type="text" name="quantity" value="${cartItem.quantity}"/></td>
@@ -35,10 +35,9 @@
                      	<input type="submit" value="Update" class="btn btn-info"/>
                      	<a href="<c:url value="/deleteCartItem/${cartItem.cartItemId}" />" class="btn btn-danger"> Delete</a> 
                      </td>
-                   
-                      
+                                     
                     </tr>
-                    </form>
+                </form>
                     </c:forEach>
                     
                     <tr>
@@ -66,14 +65,16 @@
             </table>
         </div>
     </div>
-    <div class="col mb-2 ">
-    	<div class="row">
-    		<div class="col-sm-6 col-md-3">
-    			<button class="btn btn-block btn-info btn-sm float-right"> Continue Shopping</button>
+    <div >
+    	<div class="row ">
+    		<div class="col-sm-12 col-md-6 col-sm-6 text-right">
+    			<a href="<c:url value="/productsPage"/>" class="btn btn-info " > Continue Shopping</a>
     		</div>
-    		<div class="col-sm-6 col-md-3 text-right float-right">
-    			<button class="btn btn-block btn-info btn-sm float-right" > Checkout</button>
+    		<c:if test="${!empty cartItems}">
+    		<div class="col-sm-12 col-md-6 col-sm-6 text-left">
+    			<a href="<c:url value="/checkout"/>" class="btn btn-info " > Proceed To Buy</a>
     		</div>
+    		</c:if>
     	</div>
     </div>
 </div>

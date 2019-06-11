@@ -11,25 +11,30 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.web.multipart.MultipartFile;
 
+/*@Entity annotation defines that a class can be mapped to a table.*/
 
 @Entity
 public class Product {
-	
+
+	/*@Id marks a field in a model class as the primary key*/
+	/*@GeneratedValue(strategy = GenerationType.IDENTITY) - It relies on an auto-incremented database column and lets the database generate a new value with each insert operation.*/
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int prodId;
 	
+	/*@NotNull constraint won’t allow null values for the constrained field*/
 	@NotNull
 	private String prodName;
 	
-	@Transient @NotNull 
+	/*@Transient - annotation used to mark a field in a model class as transient. Hence the data store engine won’t read or write this field’s value*/
+	@Transient 
 	MultipartFile pimage;
 	
 	@NotNull
 	private String prodDesc;
 	
 	
-	@NotNull @Min(1) @Max(150)
+	@NotNull @Min(5) @Max(150)
 	private int stock;
 	
 	
@@ -45,6 +50,7 @@ public class Product {
 	private int supId;
 	
 	
+	/*Getter and Setter methods for accessing the feilds*/
 	public int getProdId() {
 		return prodId;
 	}
