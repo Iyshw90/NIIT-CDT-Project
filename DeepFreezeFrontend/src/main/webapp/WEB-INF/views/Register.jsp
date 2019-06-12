@@ -100,7 +100,7 @@
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="address" pattern="[A-Za-z0-9]+{10,}" title="Enter valid address" class="form-control" placeholder="Address" type="text" required>
+        <input name="address" pattern="[a-zA-Z0-9\s\.\,]+" title="Enter valid address" class="form-control" placeholder="Address" type="text" required>
     </div> <!-- form-group// -->                                  
     <div class="form-group">
         <input type="submit" value="Create Account" class="btn btn-primary btn-block" />  
