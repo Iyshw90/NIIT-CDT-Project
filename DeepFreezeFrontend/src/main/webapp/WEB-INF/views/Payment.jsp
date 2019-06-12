@@ -18,9 +18,7 @@
 
 }
 .checkbox.pull-right { margin: -6; }
-.container-fluid {
-	height:15%;
-}
+
 .navbar{
 padding: .01rem 1rem;
 }
@@ -39,7 +37,7 @@ padding: .01rem 1rem;
 <div class="container">
     <div class="row">
     <form action="<c:url value="/pay"/>" method="POST">
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-4 ">
             <div class="panel panel-default">
             
                 <div class="panel-heading">

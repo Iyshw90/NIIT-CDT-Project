@@ -12,6 +12,25 @@
     display: inline-block;
 }
 
+.navbar-nav {
+	float:left ! important;
+	margin-right: 662px;
+}
+
+.navbar-right {
+	float:right ! important;
+}
+
+.navbar{
+padding: .01rem 1rem;
+}
+.navbar-dark .navbar-nav .active>.nav-link{
+	font-size: 16px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+}
+
+
 .table > tbody > tr > .no-line {
     border-top: none;
 }

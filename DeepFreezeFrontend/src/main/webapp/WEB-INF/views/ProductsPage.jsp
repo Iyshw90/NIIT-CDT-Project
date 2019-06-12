@@ -8,8 +8,8 @@
 }
 
 .thumbnailSize {
-	width: 60%;
-	height: 28% ! important;
+	width: 40%;
+	height: 20% ! important;
 	display: inline-block; /* makes it fit in like an <img> */
 	background-size: cover; /* or contain */
 	background-position: center center;
