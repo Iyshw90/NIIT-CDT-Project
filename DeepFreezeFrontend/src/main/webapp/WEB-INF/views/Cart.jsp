@@ -29,7 +29,7 @@
                     <td><img class="img-fluid img-thumbnail thumbnailSize" src="<c:url value="/resources/images/${cartItem.prodId}.jpg"/>" width="50" height="50" ></td>
                     <td>${cartItem.productName}</td>
                     <td>In Stock</td>
-                    <td><input class="form-control" type="text" name="quantity" value="${cartItem.quantity}"/></td>
+                    <td><input class="form-control" pattern="[1-3]{1}" title="Enter a valid number.Maximun allowed quantity is 3" type="text" name="quantity" value="${cartItem.quantity}"/></td>
                     <td class="text-right" >${cartItem.price}</td>
                     <td class="text-right" >${cartItem.price * cartItem.quantity}</td>
                      <td class="text-right" >
