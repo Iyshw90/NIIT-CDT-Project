@@ -57,6 +57,7 @@ public class CartController {
 		return "Cart";
 	}
 	
+	/*calculateGrandTotal() - This method returns the grandTotal amount of the purchase. */
 	public int calculateGrandTotal(List<Cart> listCartItems)
 	{
 		int count=0, grandTotal =0;

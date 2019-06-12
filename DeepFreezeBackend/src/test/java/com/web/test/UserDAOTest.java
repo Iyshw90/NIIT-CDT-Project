@@ -36,7 +36,7 @@ static UserDAO userDetailDAO;
 		user.setPassword("1090");
 		user.setRole("ROLE_ADMIN");
 		user.setAddress("Galapagos");
-		user.setCustomerName("Yang Yang");
+		user.setCustomername("Yang Yang");
 		user.setEnabled(true);
 				
 		assertTrue("Problem in adding User", userDetailDAO.addUser(user));

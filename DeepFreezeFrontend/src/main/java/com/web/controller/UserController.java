@@ -48,6 +48,8 @@ public class UserController {
 		Authentication authentication= sContext.getAuthentication();
 		
 		String username=authentication.getName();
+		String name= authentication.getPrincipal().toString();
+		System.out.println("Pricipal::::" +name);
 		
 		//getting all the roles associated with the user
 		Collection<GrantedAuthority> roles = (Collection<GrantedAuthority>) authentication.getAuthorities();
@@ -79,7 +81,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/RegisterUser")
-	public String registerUser(@RequestParam("customerName")String customerName, @RequestParam("username")String username,@RequestParam("email")String email,@RequestParam("password")String password,@RequestParam("address")String address)
+	public String registerUser(@RequestParam("customername")String customerName, @RequestParam("username")String username,@RequestParam("email")String email,@RequestParam("password")String password,@RequestParam("address")String address)
 	{
 		System.out.println("Inside our register User controller");
 		
@@ -89,7 +91,7 @@ public class UserController {
 		System.out.println("Password#######################::::"+hashedPassword);
 		
 		UserDetail user = new UserDetail();
-		user.setCustomerName(customerName);
+		user.setCustomername(customerName);
 		user.setRole("ROLE_USER");
 		user.setUserName(username);
 		user.setPassword(hashedPassword);

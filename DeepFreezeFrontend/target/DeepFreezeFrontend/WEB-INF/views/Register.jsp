@@ -68,7 +68,7 @@
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="customerName" pattern="[A-Za-z]{2,30}" title="Enter valid name" class="form-control" placeholder="Full name" type="text" required>
+        <input name="customername" pattern="[A-Za-z]{2,30}" title="Enter valid name" class="form-control" placeholder="Full name" type="text" required>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
 		<div class="input-group-prepend">

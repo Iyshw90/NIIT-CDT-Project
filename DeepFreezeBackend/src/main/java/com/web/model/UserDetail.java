@@ -32,7 +32,7 @@ public class UserDetail {
 	private String role;
 	
 	@NotNull
-	private String customerName;
+	private String customername;
 	
 	/*Getter and Setter methods for accessing the feilds*/
 	public String getUserName() {
@@ -71,11 +71,11 @@ public class UserDetail {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	public String getCustomerName() {
-		return customerName;
+	public String getCustomername() {
+		return customername;
 	}
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
+	public void setCustomername(String customerName) {
+		this.customername = customerName;
 	}
 	
 	
