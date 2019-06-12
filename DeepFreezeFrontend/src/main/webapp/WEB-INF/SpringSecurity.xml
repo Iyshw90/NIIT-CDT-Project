@@ -36,8 +36,8 @@
 				<password-encoder ref="encoder" />
 				<security:jdbc-user-service
 								data-source-ref="dataSource"
-								users-by-username-query="select username,password,enabled,customername from UserDetail where username=?"
-								authorities-by-username-query="select username,role,customername from UserDetail where username=?"	/>		
+								users-by-username-query="select username,password,enabled from UserDetail where username=?"
+								authorities-by-username-query="select username,role from UserDetail where username=?"	/>		
 			</security:authentication-provider>
 		
 		</security:authentication-manager>

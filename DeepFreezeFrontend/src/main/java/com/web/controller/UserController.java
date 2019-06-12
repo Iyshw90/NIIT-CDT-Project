@@ -48,8 +48,7 @@ public class UserController {
 		Authentication authentication= sContext.getAuthentication();
 		
 		String username=authentication.getName();
-		String name= authentication.getPrincipal().toString();
-		System.out.println("Pricipal::::" +name);
+		
 		
 		//getting all the roles associated with the user
 		Collection<GrantedAuthority> roles = (Collection<GrantedAuthority>) authentication.getAuthorities();
@@ -64,6 +63,8 @@ public class UserController {
 				page="AdminHome";
 				session.setAttribute("loggedIn", loggedIn);
 				session.setAttribute("username", username);
+				session.setAttribute("customername", userDAO.getUser(username).getCustomername());
+				
 			}
 			else
 			{
@@ -73,6 +74,7 @@ public class UserController {
 				page="Index";
 				session.setAttribute("loggedIn", loggedIn);
 				session.setAttribute("username", username);
+				session.setAttribute("customername", userDAO.getUser(username).getCustomername());
 				
 			}
 		}
@@ -84,7 +86,6 @@ public class UserController {
 	public String registerUser(@RequestParam("customername")String customerName, @RequestParam("username")String username,@RequestParam("email")String email,@RequestParam("password")String password,@RequestParam("address")String address)
 	{
 		System.out.println("Inside our register User controller");
-		
 		
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String hashedPassword = passwordEncoder.encode(password);

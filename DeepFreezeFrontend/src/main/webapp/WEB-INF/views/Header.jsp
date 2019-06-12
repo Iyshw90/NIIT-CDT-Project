@@ -99,7 +99,7 @@ color:white;
 			
 			<c:if test="${sessionScope.loggedIn}">
 				<li class="nav-item active"><a class="nav-link" href="#">
-				<span class="glyphicon glyphicon-user" >${sessionScope.username}</span>
+				<span class="glyphicon glyphicon-user" >${sessionScope.customername}</span>
 						</a></li>
 				<li class="nav-item active"><a class="nav-link" href="<c:url value="/perform_logout"/>" >
 				<span class="glyphicon glyphicon-log-out" ></span>
