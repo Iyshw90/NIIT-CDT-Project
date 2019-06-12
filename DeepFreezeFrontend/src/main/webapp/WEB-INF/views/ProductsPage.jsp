@@ -8,8 +8,8 @@
 }
 
 .thumbnailSize {
-	width: 50%;
-	height: 23% ! important;
+	width: 60%;
+	height: 28% ! important;
 	display: inline-block; /* makes it fit in like an <img> */
 	background-size: cover; /* or contain */
 	background-position: center center;
@@ -25,25 +25,25 @@
 					<c:if test="${product.stock > 0 }">
 						<a href="<c:url value="/singleProductDisplay/${product.prodId}"/>" 	class="d-block mb-4 h-100"> 
 							<img class="img-fluid img-thumbnail thumbnailSize" src="<c:url value="/resources/images/${product.prodId}.jpg"/>"
-							width="100" height="100" />
+							 />
 						</a>
 					</c:if>
-
+				
 					<p>Price: ${product.price}</p>
 					<p>
 						Stock:
 						<c:if test="${product.stock >0  }">${product.stock}</c:if>
-						<c:if test="${product.stock <=0 }">
+						<c:if test="${product.stock <= 0 }">
 							<font color="red">Out Of Stock</font>
 						</c:if>
 					</p>
 
 					<p>
-					<h4>${product.prodName}</h4>
-					</p>
+					<h6>${product.prodName}</h6></p>
+					
 
-
-				</div>
+</div>
+				
 
 			</c:forEach>
 

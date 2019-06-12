@@ -19,6 +19,7 @@
                         <th scope="col" class="text-center">Price</th>
                         <th scope="col" class="text-center">Total Price</th>
                         <th> </th>
+                         <th> </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,8 +33,8 @@
                     <td class="text-right" >${cartItem.price}</td>
                     <td class="text-right" >${cartItem.price * cartItem.quantity}</td>
                      <td class="text-right" >
-                     	<input type="submit" value="Update" class="btn btn-info"/>
-                     	<a href="<c:url value="/deleteCartItem/${cartItem.cartItemId}" />" class="btn btn-danger"> Delete</a> 
+                     	<input type="submit" value="Update" class="btn btn-info"/></td>
+                     <td>	<a href="<c:url value="/deleteCartItem/${cartItem.cartItemId}" />" class="btn btn-danger"> Delete</a> 
                      </td>
                                      
                     </tr>
@@ -45,9 +46,10 @@
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
-                        <td>   </td>
                         <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><strong>INR. ${grandTotal} /- </strong></td>
+                        <td class="text-right"><strong>INR.${grandTotal} </strong></td>
+                        <td>   </td>
+                        <td>   </td>
                     </tr>
                    
                     <tr>
@@ -55,9 +57,10 @@
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
-                        <td>   </td>
                         <td><h3>Total</h3></td>
-                        <td class="text-right"><h5><strong>INR. ${grandTotal} /-</strong></h5></td>
+                        <td class="text-right"><h5><strong>INR.${grandTotal}/-</strong></h5></td>
+                        <td>   </td>
+                        <td>   </td>
                     </tr>
                    
                     
