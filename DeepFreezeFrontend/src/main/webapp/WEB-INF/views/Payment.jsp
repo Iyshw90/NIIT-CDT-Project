@@ -10,14 +10,19 @@
 
 
 <style type="text/css">
-
+.radioButton{
+margin-top:-10px;
+margin-right:5px;
+margin-left:5px;
+margin-bottom:5px;
+}
 
 .panel-title {display: inline;font-weight: bold;}
 
 .panel-heading{
 
 }
-.checkbox.pull-right { margin: -6; }
+.checkbox.pull-right { margin: -7; }
 
 .navbar{
 padding: .01rem 1rem;
@@ -41,10 +46,10 @@ padding: .01rem 1rem;
             <div class="panel panel-default">
             
                 <div class="panel-heading">
-                
+                    <div >
                     <h5 class="panel-title">Payment Details</h5>
-                   
-                    
+                   	</div>
+                    <div class="radioButton">
                     <div class="checkbox pull-right">
                         <label>
                         	<input onclick="document.getElementById('cardNumber').disabled = false;document.getElementById('cardHolderName').disabled = false;document.getElementById('mm').disabled = false;document.getElementById('yy').disabled = false;document.getElementById('cv').disabled = false;" 
@@ -53,6 +58,7 @@ padding: .01rem 1rem;
                          	type="radio" name="pmode" required value="COD"/>COD
                          
                         </label>
+                    </div>
                     </div>
                 </div>
                 
