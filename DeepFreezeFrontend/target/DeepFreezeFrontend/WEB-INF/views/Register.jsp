@@ -68,19 +68,19 @@
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="customerName" class="form-control" placeholder="Full name" type="text" required>
+        <input name="customerName" pattern="[A-Za-z]{2,30}" title="Enter valid name" class="form-control" placeholder="Full name" type="text" required>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="username" class="form-control" placeholder="User name" type="text" required>
+        <input name="username" pattern="[A-Za-z0-9]{3,15}" title="Username name can contain only Alphabets and numbers" class="form-control" placeholder="User name" type="text" required>
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 		 </div>
-        <input name="email" class="form-control" placeholder="Email address" type="email" required>
+        <input name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Enter valid Email Id" class="form-control" placeholder="Email address" type="email" required>
     </div> <!-- form-group// -->
    
     
@@ -88,19 +88,19 @@
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 		</div>
-        <input name="password" class="form-control" placeholder="Create password" type="password" required>
-    </div> <!-- form-group// -->
+        <input name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" class="form-control" placeholder="Create password" type="password" required>
+    </div> <!-- form-group// 
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 		</div>
         <input class="form-control" placeholder="Repeat password" type="password" required>
-    </div> <!-- form-group// -->    
+    </div>--> <!-- form-group// -->    
      <div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="address" class="form-control" placeholder="Address" type="text" required>
+        <input name="address" pattern="[a-zA-Z0-9\s\.\,]+" title="Enter valid address" class="form-control" placeholder="Address" type="text" required>
     </div> <!-- form-group// -->                                  
     <div class="form-group">
         <input type="submit" value="Create Account" class="btn btn-primary btn-block" />  

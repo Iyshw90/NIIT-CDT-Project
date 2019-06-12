@@ -40,10 +40,10 @@
                     	<th scope="col"></th>
                     	<th scope="col">Products</th>
                         <th scope="col">Available</th>
-                        <th scope="col" class="text-center">Quantity</th>
-                        <th scope="col" class="text-center">Price</th>
-                        <th scope="col" class="text-center">Total Price</th>
-                        <th></th>
+                        <th scope="col" >Quantity</th>
+                        <th scope="col" >Price</th>
+                        <th scope="col" >Total Price</th>
+                       
                         
                     </tr>
                 </thead>
@@ -51,16 +51,12 @@
                 <c:forEach items="${cartItems}" var="cartItem">
                 <form action="<c:url value="/updateCartItem/${cartItem.cartItemId}"/>" method="get">
                    <tr>
-                    <td><img src="<c:url value="/resources/images/${cartItem.productId}.jsp"/>" ></td>
+                    <td><img class="img-fluid img-thumbnail thumbnailSize" src="<c:url value="/resources/images/${cartItem.prodId}.jpg"/>" width="50" height="50"></td>
                     <td>${cartItem.productName}</td>
                     <td>In Stock</td>
                     <td>${cartItem.quantity}</td>
-                    
-                    <td class="text-right" >${cartItem.price}</td>
-                    <td class="text-right" >${cartItem.price * cartItem.quantity}</td>
-                    
-                   
-                      
+                    <td  >${cartItem.price}</td>
+                    <td  >${cartItem.price * cartItem.quantity}</td>
                     </tr>
                     </form>
                     </c:forEach>
@@ -70,9 +66,8 @@
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
-                        <td>   </td>
                         <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><strong>INR. ${grandTotal} /- </strong></td>
+                        <td ><strong>INR.${grandTotal} </strong></td>
                     </tr>
                    
                     <tr>
@@ -80,9 +75,9 @@
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
-                        <td>   </td>
+                        
                         <td><h3>Total</h3></td>
-                        <td class="text-right"><h5><strong>INR. ${grandTotal} /-</strong></h5></td>
+                        <td ><h5><strong>INR.${grandTotal} /-</strong></h5></td>
                     </tr>
                 </tbody>
             </table>

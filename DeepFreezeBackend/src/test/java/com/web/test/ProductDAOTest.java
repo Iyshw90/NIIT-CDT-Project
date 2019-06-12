@@ -16,6 +16,7 @@ public class ProductDAOTest {
 	
 	static ProductDAO productDAO;
 
+	/*@Beforeclass - annotation is used if you want to execute some statements before all the test cases .Also this method should be static and it has to be executed before the class.*/
 	@BeforeClass
 	public static void executeFirst()
 	{
@@ -25,7 +26,9 @@ public class ProductDAOTest {
 		productDAO = (ProductDAO) context.getBean("productDAO");
 	}
 
-	
+	/*@Test - annotation is a replacement of org.junit.TestCase which indicates that public void method to which it is attached can be executed as a test Case.*/
+	/*"assertTrue()" functionality is to check that a condition given is true or not.*/
+	/*addProductTest() - For testing insertion operation into Product Table*/
 	@Test
 	public void addProductTest() {
 		Product product = new Product();
@@ -40,6 +43,8 @@ public class ProductDAOTest {
 		
 	}
 	
+	/*@Ignore - annotation can be used if you want to ignore some statements during test execution for e.g. disabling some test cases during test execution.*/
+	/*deleteProductTest() - For testing the delete operation into Product Table */
 	
 	@Ignore
 	@Test
@@ -50,6 +55,8 @@ public class ProductDAOTest {
 	}
 	
 	
+	
+	/*updateProductTest() - For testing the update operation into Product Table */
 	@Ignore
 	@Test
 	public void updateProductTest()
@@ -60,6 +67,7 @@ public class ProductDAOTest {
 		
 	}
 	
+	/*showProductListCategoryWise() - For listing the Product based on Category*/
 	@Ignore
 	@Test
 	public void showProductListCategoryWise()
@@ -80,7 +88,7 @@ public class ProductDAOTest {
 		
 	}
 		
-	
+	/*listProduct() - For listing all the items from the Product Table*/
 	@Ignore
 	@Test
 	public void listProduct()

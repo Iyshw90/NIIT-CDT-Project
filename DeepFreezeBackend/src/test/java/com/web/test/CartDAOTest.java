@@ -16,6 +16,7 @@ public class CartDAOTest {
 	
 	static CartDAO cartDAO;
 	
+	/*@Beforeclass - annotation is used if you want to execute some statements before all the test cases .Also this method should be static and it has to be executed before the class.*/
 	@BeforeClass
 	public static void executeFirst()
 	{
@@ -27,6 +28,9 @@ public class CartDAOTest {
 	}
 
 	
+	/*@Test - annotation is a replacement of org.junit.TestCase which indicates that public void method to which it is attached can be executed as a test Case.*/
+	/*"assertTrue()" functionality is to check that a condition given is true or not.*/
+	/*addToCartTest() - For testing insertion operation into Cart Table*/
 	@Test
 	public void addToCartTest() {
 		Cart cart= new Cart();
@@ -41,6 +45,8 @@ public class CartDAOTest {
 		assertTrue("Problem in adding item to cart",cartDAO.addToCart(cart));
 	}
 	
+	/*@Ignore - annotation can be used if you want to ignore some statements during test execution for e.g. disabling some test cases during test execution.*/
+	/*updateCartItemTest() - For testing the update operation into Cart Table */
 	@Ignore
 	@Test
 	public void updateCartItemTest()
@@ -52,6 +58,7 @@ public class CartDAOTest {
 		
 	}
 	
+	/*deleteCartItemTest() - For testing the delete operation into Cart Table*/
 	@Ignore
 	@Test
 	public void deleteCartItemTest()
@@ -61,6 +68,7 @@ public class CartDAOTest {
 	}
 	
 	
+	/*listCartItemTest() - For listing all the items from the Cart Table*/
 	@Test
 	public void listCartItemTest()
 	{

@@ -30,10 +30,12 @@ nav {
 	padding: 50px 0;
 	box-shadow: 0px 5px 0px #dedede;
 }
-
+.navbar {
+    border-radius: 4px;
+}
 nav ul li {
 	display: inline-block;
-	text
+
 }
 
 .navbar .navbar-nav>li>a:hover, .navbar .navbar-nav>li>a:focus ,a>span.glyphicon:focus ,a>span.glyphicon:hover{

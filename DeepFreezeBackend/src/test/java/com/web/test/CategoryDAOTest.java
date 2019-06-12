@@ -16,6 +16,7 @@ public class CategoryDAOTest {
 
 	static CategoryDAO categoryDAO;
 
+	/*@Beforeclass - annotation is used if you want to execute some statements before all the test cases .Also this method should be static and it has to be executed before the class.*/
 	@BeforeClass
 	public static void executeFirst()
 	{
@@ -26,6 +27,9 @@ public class CategoryDAOTest {
 	}
 
 	
+	/*@Test - annotation is a replacement of org.junit.TestCase which indicates that public void method to which it is attached can be executed as a test Case.*/
+	/*"assertTrue()" functionality is to check that a condition given is true or not.*/
+	/*addCategoryTest() - For testing insertion operation into Category Table*/
 	@Test
 	public void addCategoryTest() {
 		Category category = new Category();
@@ -36,6 +40,9 @@ public class CategoryDAOTest {
 		assertTrue("Problem in adding category", categoryDAO.addCategory(category));
 	}
 	
+	
+	/*@Ignore - annotation can be used if you want to ignore some statements during test execution for e.g. disabling some test cases during test execution.*/
+	/*deleteCategoryTest() - For testing the delete operation into Category Table */
 	@Ignore
 	@Test
 	public void deleteCategoryTest()
@@ -44,7 +51,7 @@ public class CategoryDAOTest {
 		assertTrue("Problem in deleting category", categoryDAO.deleteCategory(category));
 	}
 	
-	
+	/*updateCategoryTest() - For testing the update operation into Category Table */
 	@Ignore
 	@Test
 	public void updateCategoryTest()
@@ -55,7 +62,7 @@ public class CategoryDAOTest {
 	}
 
 	
-	
+	/*listCategory() - For listing all the items from the Category Table*/
 	@Test
 	public void listCategory()
 	{

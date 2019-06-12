@@ -16,6 +16,7 @@ public class SupplierDAOTest {
 
 	static SupplierDAO supplierDAO;
 
+	/*@Beforeclass - annotation is used if you want to execute some statements before all the test cases .Also this method should be static and it has to be executed before the class.*/
 	@BeforeClass
 	public static void executeFirst()
 	{
@@ -25,7 +26,10 @@ public class SupplierDAOTest {
 		supplierDAO = (SupplierDAO) context.getBean("supplierDAO");
 	}
 	
+	/*@Test - annotation is a replacement of org.junit.TestCase which indicates that public void method to which it is attached can be executed as a test Case.*/
+	/*"assertTrue()" functionality is to check that a condition given is true or not.*/
 	
+	/*addSupplierTest() - For testing insertion operation into Supplier Table*/
 	@Test
 	public void addSupplierTest() {
 		Supplier supplier = new Supplier();
@@ -36,6 +40,8 @@ public class SupplierDAOTest {
 		
 	}
 	
+	/*@Ignore - annotation can be used if you want to ignore some statements during test execution for e.g. disabling some test cases during test execution.*/
+	/*deleteSupplierTest() - For testing the delete operation into Supplier Table */
 	@Ignore
 	@Test
 	public void deleteSupplierTest()
@@ -44,6 +50,8 @@ public class SupplierDAOTest {
 		assertTrue("Problem in deleting Supplier", supplierDAO.deleteSupplier(supplier));
 	}
 
+	
+	/*updateSupplierTest() - For testing the update operation into Supplier Table */
 	@Ignore
 	@Test
 	public void updateSupplierTest()
@@ -55,7 +63,7 @@ public class SupplierDAOTest {
 		
 	}
 	
-	
+	/*listSupplier() - For listing all the items from the Supplier Table*/
 	@Test
 	public void listSupplier()
 	{
