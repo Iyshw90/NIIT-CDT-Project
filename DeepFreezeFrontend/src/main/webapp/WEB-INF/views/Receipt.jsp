@@ -15,7 +15,6 @@
 	display: inline-block;
 }
 
-
 .navbar-nav {
 	float: left ! important;
 	margin-right: 662px;
@@ -134,15 +133,34 @@
 									<hr>
 									<br>
 									<tr>
-									<td></td>
-									<td></td>
-									<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
 										<td>
 											<center>
-												<a href="index.jsp" class="btn btn-block btn-info" > Ok </a>
+												<a href="index.jsp" class="btn btn-block btn-info"> Ok
+												</a>
 											</center>
 										</td>
-									
+
+									</tr>
+
+									<tr>
+										<td><strong>To Mail Receipt :</strong> </td>
+										<td  colspan="3">
+											<form method="get" action="sendEmail">
+											<table class="table table-condensed">
+											
+											<td><strong>	Email: </strong>  <input type="text" name="email"> </td>
+											<td><strong>	First Name:</strong> <input type="text" name="firstname"></td> 
+												
+											<td colspan="3">	<input type="submit" class="btn btn-block btn-info" value="&nbsp;&nbsp;  send&nbsp;&nbsp;  "></td>
+											</table>
+											</form>
+
+										</td>
+										
+
 									</tr>
 								</tbody>
 							</table>
