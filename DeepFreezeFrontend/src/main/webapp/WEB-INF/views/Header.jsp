@@ -66,7 +66,7 @@ color:white;
 			
 				<li class="nav-item active"><a class="nav-link" href="index.jsp"> Home</a></li>
 				<li class="nav-item active"><a class="nav-link" href="<c:url value="/aboutUs"/>"> About Us</a></li>
-				<!--  <li class="nav-item active"><a class="nav-link" href="<c:url value="/productsPage"/>">Products</a></li> -->
+				<li class="nav-item active"><a class="nav-link" href="<c:url value="/productsPage"/>">Products</a></li> 
 			</c:if>
 			
 			<c:if test="${sessionScope.loggedIn}">

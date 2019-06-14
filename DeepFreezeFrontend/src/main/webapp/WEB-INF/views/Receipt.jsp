@@ -15,6 +15,7 @@
 	display: inline-block;
 }
 
+
 .navbar-nav {
 	float: left ! important;
 	margin-right: 662px;
@@ -115,22 +116,23 @@
 									<tr>
 										<td class="thick-line"></td>
 										<td class="thick-line"></td>
-										<td class="thick-line text-center"><strong>Subtotal</strong></td>
+										<td class="thick-line text-center"><strong>Subtotal:</strong></td>
 										<td class="thick-line text-right">INR ${grandTotal} /-</td>
 									</tr>
 									<tr>
 										<td class="no-line"></td>
 										<td class="no-line"></td>
-										<td class="no-line text-center"><strong>Shipping</strong></td>
+										<td class="no-line text-center"><strong>Shipping:</strong></td>
 										<td class="no-line text-right">INR. $150</td>
 									</tr>
 									<tr>
 										<td class="no-line"></td>
 										<td class="no-line"></td>
-										<td class="no-line text-center"><strong>Total</strong></td>
+										<td class="no-line text-center"><strong>Total:</strong></td>
 										<td class="no-line text-right">INR ${grandTotal+150} /-</td>
 									</tr>
 									<hr>
+									<br>
 									<tr>
 									<td></td>
 									<td></td>

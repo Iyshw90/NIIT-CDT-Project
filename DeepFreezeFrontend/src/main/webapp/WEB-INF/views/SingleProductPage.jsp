@@ -107,12 +107,13 @@
 				</div>
 			</div>
 			<div class="container" id="contRight">	
+			<c:if test="${sessionScope.loggedIn}">
 				<form action="<c:url value="/addToCart/${product.prodId}" />" method="get">
 				<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 ">
 					<div class="product-title">${product.prodName}</div>
 					<div class="product-desc">${product.prodDesc}</div>
 					<hr>
-					<div class="product-price">INR ${product.price}</div>
+					<div class="product-price">INR.${product.price}</div>
 					<div class="product-stock">In Stock</div>
 					<div class="product-price" >Quantity
 						<select name="quantity">
@@ -136,6 +137,40 @@
 				</div>
 				
 				</form>	
+			</c:if>
+			<c:if test="${!sessionScope.loggedIn}">
+				<form action="<c:url value="/login"/>" method="get">
+				<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 ">
+					<div class="product-title">${product.prodName}</div>
+					<div class="product-desc">${product.prodDesc}</div>
+					<hr>
+					<div class="product-price">INR.${product.price}</div>
+					<div class="product-stock">In Stock</div>
+					<div class="product-price" >Quantity
+						<select name="quantity">
+							<option value="1" > 1</option>
+							<option value="2" > 2</option>
+							<option value="3" > 3</option>
+													
+						</select>
+					</div>
+					<hr>
+					<div class="btn-group cart">
+					
+						<input type="submit" value="Add to cart" class="btn btn-success" />
+							
+						
+					</div>
+					<!--  <div class="btn-group wishlist">
+						<a href="<c:url value="/checkout"/>" class="btn btn-block btn-danger" > Buy Now</a>
+						
+					</div>-->
+				</div>
+				
+				</form>	
+				
+			</c:if>
+				
 			</div> 
 		</div>
 		
