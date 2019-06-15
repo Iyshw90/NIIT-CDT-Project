@@ -149,12 +149,13 @@
 										<td><strong>To Mail Receipt :</strong> </td>
 										<td  colspan="3">
 											<form method="get" action="sendEmail">
-											<table class="table table-condensed">
-											
+											<table class="table">
+											<thead>
 											<td><strong>	Email: </strong>  <input type="text" name="email"> </td>
 											<td><strong>	First Name:</strong> <input type="text" name="firstname"></td> 
 												
-											<td colspan="3">	<input type="submit" class="btn btn-block btn-info" value="&nbsp;&nbsp;  send&nbsp;&nbsp;  "></td>
+											<td colspan="3"><input type="submit" class="btn btn-block btn-info" value="&nbsp;&nbsp;  send &nbsp;&nbsp;  "></td>
+											</thead>
 											</table>
 											</form>
 
